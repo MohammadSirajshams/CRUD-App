@@ -33,13 +33,6 @@ try {
 
 }
 
-// static files
-
-app.use(express.static(path.join(__dirname,'../crud-app/build')))
-
-app.get('*',(req,res)=>{
-    res.sendFile(path.join(__dirname,'../crud-app/build/index.html'))
-})
 
 const port=process.env.PORT || 8000
 
